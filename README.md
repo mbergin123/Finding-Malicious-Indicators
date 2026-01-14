@@ -20,7 +20,7 @@ This project mirrors real-world SOC and DFIR workflows and demonstrates how mult
 Both systems were connected to the same network segment.
 
 ### 📸 Lab Topology
-![Lab Topology](top.png)
+![Lab Topology](images/top.png)
 
 ---
 
@@ -45,7 +45,7 @@ Both systems were connected to the same network segment.
 Used `netstat -an` to view all listening ports and active connections on the compromised server.
 
 📸 **Screenshot:**  
-![netstat output](edrive.png)
+![netstat output](images/edrive.png)
 
 ---
 
@@ -54,7 +54,7 @@ Used `netstat -an` to view all listening ports and active connections on the com
 Filtered results to show only established connections.
 
 📸 **Screenshot:**  
-![Established connections](established.png)
+![Established connections](images/established.png)
 
 ---
 
@@ -63,7 +63,7 @@ Filtered results to show only established connections.
 Filtered out IPv6 link-local traffic (`fe80::`) to reduce noise.
 
 📸 **Screenshot:**  
-![IPv6 filtered](findv.png)
+![IPv6 filtered](images/findv.png)
 
 ---
 
@@ -72,7 +72,7 @@ Filtered out IPv6 link-local traffic (`fe80::`) to reduce noise.
 Confirmed the external IP associated with port 1604.
 
 📸 **Screenshot:**  
-![Port 1604 IP](1604.png)
+![Port 1604 IP](images/1604.png)
 
 ---
 
@@ -81,7 +81,7 @@ Confirmed the external IP associated with port 1604.
 Mapped established connections to process IDs using `netstat -ano`.
 
 📸 **Screenshot:**  
-![PID correlation](ano.png)
+![PID correlation](images/ano.png)
 
 ---
 
@@ -90,7 +90,7 @@ Mapped established connections to process IDs using `netstat -ano`.
 Used PsList to review active processes on the system.
 
 📸 **Screenshot:**  
-![PsList output](pslist.png)
+![PsList output](images/pslist.png)
 
 ---
 
@@ -99,8 +99,8 @@ Used PsList to review active processes on the system.
 Used Process Explorer to inspect suspicious processes and verify network connections.
 
 📸 **Screenshots:**  
-![Process Explorer](procexp.png)  
-![Resolve Address Disabled](resaddress.png)
+![Process Explorer](images/procexp.png)  
+![Resolve Address Disabled](images/resaddress.png)
 
 ---
 
@@ -109,8 +109,8 @@ Used Process Explorer to inspect suspicious processes and verify network connect
 Reviewed `winhelper.exe` and `msn.exe` network activity.
 
 📸 **Screenshots:**  
-![winhelper.exe connection](winhelper.png)  
-![msn.exe connection](msn.png)
+![winhelper.exe connection](images/winhelper.png)  
+![msn.exe connection](images/msn.png)
 
 ---
 
@@ -119,7 +119,7 @@ Reviewed `winhelper.exe` and `msn.exe` network activity.
 Used Autoruns to identify startup persistence.
 
 📸 **Screenshot:**  
-![Autoruns output](autoruns.png)
+![Autoruns output](images/autoruns.png)
 
 **Persistence Locations Identified**
 - HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit  
@@ -134,7 +134,7 @@ Used Autoruns to identify startup persistence.
 Captured volatile memory using DumpIt.
 
 📸 **Screenshot:**  
-![DumpIt memory capture](dumpit.png)
+![DumpIt memory capture](images/dumpit.png)
 
 ---
 
@@ -143,7 +143,7 @@ Captured volatile memory using DumpIt.
 Renamed memory image for compatibility with forensic tools.
 
 📸 **Screenshot:**  
-![Renamed memory image](renameraw.png)
+![Renamed memory image](images/renameram.png)
 
 ---
 
@@ -152,8 +152,8 @@ Renamed memory image for compatibility with forensic tools.
 Enumerated processes directly from RAM using Volatility.
 
 📸 **Screenshots:**  
-![Volatility help](standalone.png)  
-![Volatility pslist](win200.png)
+![Volatility help](images/standalone.png)  
+![Volatility pslist](images/win200.png)
 
 ---
 
@@ -162,7 +162,7 @@ Enumerated processes directly from RAM using Volatility.
 Identified recently created malicious executables on disk.
 
 📸 **Screenshot:**  
-![Recent files](recentfiles.png)
+![Recent files](images/recentfiles.png)
 
 ---
 
@@ -171,7 +171,7 @@ Identified recently created malicious executables on disk.
 Prepared the sniffer server and verified capture files.
 
 📸 **Screenshot:**  
-![Kali sniffer](kalisniffer.png)
+![Kali sniffer](images/kalisniffer.png)
 
 ---
 
@@ -180,7 +180,7 @@ Prepared the sniffer server and verified capture files.
 Started Wireshark capture on interface `eth0`.
 
 📸 **Screenshot:**  
-![Wireshark eth0](eth0.png)
+![Wireshark eth0](images/eth0.png)
 
 ---
 
@@ -189,7 +189,7 @@ Started Wireshark capture on interface `eth0`.
 Applied Wireshark filters to isolate malicious traffic.
 
 📸 **Screenshot:**  
-![Attacker traffic](attackv.png)
+![Attacker traffic](images/attackv.png)
 
 ---
 
@@ -198,7 +198,7 @@ Applied Wireshark filters to isolate malicious traffic.
 Confirmed no traffic during specific capture windows.
 
 📸 **Screenshot:**  
-![No traffic](noip.png)
+![No traffic](images/noip.png)
 
 ---
 
@@ -207,7 +207,7 @@ Confirmed no traffic during specific capture windows.
 Observed TCP FIN and RST packets confirming attacker disconnect.
 
 📸 **Screenshot:**  
-![Attacker disconnected](attackerdis.png)
+![Attacker disconnected](images/attackerdis.png)
 
 ---
 
